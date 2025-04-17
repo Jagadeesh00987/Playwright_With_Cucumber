@@ -1,0 +1,28 @@
+{
+  "default": {
+    "paths": [
+      "src/tests/features/**/*.feature"
+    ],
+    "require": [
+      "src/tests/steps/**/*.js",
+      "src/Supports/**/*.js"
+    ],
+    "dryRun": false,
+    "formatOptions": {
+      "snippetInterface": "async-await"
+    },
+    "tags": "not @ignore"
+  },
+  "smoke": {
+    "tags": "@smoke"
+  },
+  "regression": {
+    "tags": "@regression"
+  },
+  "format": [
+    "progress-bar",
+    "html:test-results/cucumber-report.html",
+    "json:test-results/cucumber-report.json",
+    "@rerun.txt"
+  ]
+}
