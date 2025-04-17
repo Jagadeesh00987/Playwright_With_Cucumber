@@ -53,5 +53,5 @@ When('User clicks the filter button', async function () {
 });
 
 When('User will get product based on the filter', async function () {
-  console.log('Filtered products displayed (mock check)');
+  console.log('Filtered products    displayed (mock check)');
 });
