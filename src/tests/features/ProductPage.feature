@@ -5,8 +5,8 @@ Background:
 
 Scenario: User can able to buy a Product
    When The user click the Account icon for the login
-   And The user enter the email "stevesmithcric529@gmail.com"
-   And The User enter the password "Jagadeesh@528" 
+   And The user enter the email from env
+   And The User enter the password from env
    And User click the remember me checkbox
    And User clicks the submit button
    And User clicks the product page and navigate to the product page

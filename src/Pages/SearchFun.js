@@ -14,7 +14,7 @@ class Search {
 
 async clickDropdown(value){
     await this.page.click(this.selectors.selectDrop)
-    //await this.page.selectOption(this.selectors.selectDrop, { label: value });
+    await this.page.selectOption(this.selectors.selectDrop, { label: value });
     
     //await this.page.keyboard.press('ArrowDown');
     //await this.page.keyboard.press('Enter')
