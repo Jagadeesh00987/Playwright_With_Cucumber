@@ -7,7 +7,7 @@
       "src/tests/steps/**/*.js",
       "src/Supports/**/*.js"
     ],
-    "dryRun": false,
+    "dryRun": false ,
     "formatOptions": {
       "snippetInterface": "async-await"
     },
