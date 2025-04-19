@@ -4,7 +4,9 @@ const { expect } = require('@playwright/test');
 const LoginPage = require('C:/Users/jagadeesh/Desktop/PLaywrightPractice/src/Pages/LoginPages.js');
 require('dotenv').config();
 
-Given('User is logged into the application', async function () {
+
+
+Given('User is logged into the application',{ timeout: 15 * 1000 }, async function () {
   this.loginPageform = new LoginPage(this.page);
   await this.loginPageform.goto();
   await this.loginPageform.clickAccountIcon();

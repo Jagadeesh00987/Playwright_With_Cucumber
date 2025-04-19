@@ -1,4 +1,2 @@
 src\tests\features\ProductPage.feature:6
-src\tests\features\Login.feature:5
-src\tests\features\SearchFun.feature:5
 src\tests\features\filter.feature:6

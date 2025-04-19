@@ -5,7 +5,7 @@ class Filter {
         accountIcon: "//span[text()='Account']",
         emailInput: "//input[@placeholder='Email*']",
         passwordInput: "//input[@placeholder='Your password*']",
-        clickFilter: "//span[text()='Filters']",
+        clickFilter: "//a[@class='shop-filter-toggle']",
         clickCategory: "//span[text()='Traditional Wear']",
         dragPrice: ".ui-slider-handle",
         advFilter: "//span[normalize-space(text())='Advanced filters']",

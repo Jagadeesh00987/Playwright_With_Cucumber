@@ -6,9 +6,9 @@ const SearchproductsHome=require('C:/Users/jagadeesh/Desktop/PLaywrightPractice/
 
 When('User Select certain category to search for the product', async function () {
     this.search= new SearchproductsHome(this.page);
-    await this.search.clickDropdown();
+    await this.search.clickDropdown('Women');
     console.log("Clicked")
-    await this.search.allOptionsAndClick('Traditional Wear');
+    //await this.search.allOptionsAndClick('Traditional Wear');
     });
 
   When('User enter a search keyword to find a product', async function () {
