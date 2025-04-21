@@ -22,26 +22,26 @@ async clickDropdown(value){
     //await this.page.click(this.selectors.optionsCloth)
  
 }
-async allOptionsAndClick(targetOption) {
-    const dropdownOptions = await this.page.locator(this.selectors.allCategories).allTextContents();
-    console.log("Dropdown values:", dropdownOptions);
-    for (const option of dropdownOptions) {
+// async allOptionsAndClick(targetOption) {
+//     const dropdownOptions = await this.page.locator(this.selectors.allCategories).allTextContents();
+//     console.log("Dropdown values:", dropdownOptions);
+//     for (const option of dropdownOptions) {
 
-        const text = (await option.textContent())?.trim();
+//         const text = (await option.textContent())?.trim();
 
-        console.log("Dropdown values:", option);
+//         console.log("Dropdown values:", option);
 
-      if (text === targetOption) {
+//       if (text === targetOption) {
 
-        console.log("Dropdown values:", option);
-        await option.click();
+//         console.log("Dropdown values:", option);
+//         await option.click();
         
-        return;
-      }
-    }
+//         return;
+//       }
+//     }
   
-    throw new Error(` Option "${targetOption}" not found in dropdown`);
-  }
+//     throw new Error(` Option "${targetOption}" not found in dropdown`);
+//   }
   
 async searchproducts(keyword){
     await this.page.waitForSelector(this.selectors.searchProduct,{timeout:10000})
