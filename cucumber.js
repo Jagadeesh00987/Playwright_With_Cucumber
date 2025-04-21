@@ -23,6 +23,7 @@ module.exports = {
   },
   regression: {
     tags: '@regression',
+    "report": "node scripts/generate-report.js"
   },
 }
 

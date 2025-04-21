@@ -10,7 +10,8 @@
   "test:failed": "cucumber-js --format rerun:@rerun.txt --retry 1",
   "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
   "format": "prettier --write .",
-  "test:retry": "cucumber-js --retry 2"
+  "test:retry": "cucumber-js --retry 2",
+  "test:report": "npx playwright show-report"
 
 },
 
