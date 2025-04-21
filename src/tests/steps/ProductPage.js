@@ -13,7 +13,14 @@ When('Check the avaialbe quantity of the product', async function () {
   await expect(productText.trim()).toEqual("Women Pretty Pink Solid Top");
 
   const productPrice = await this.product.getProductPrice();
+<<<<<<< HEAD
    
+=======
+  const price=productPrize.replace("Rs.","").trim()
+  console.log("Product Price:", productPrice);
+  const priceWithoutCurrency = productPrice.replace("Rs.", "")//.trim(); // remove "Rs."
+  expect(priceWithoutCurrency).toBe(price);
+>>>>>>> 48b7de30ceca0f23a329beb25e5368c23931ad07
 });
 
 When('User add the product to the cart', async function () {
