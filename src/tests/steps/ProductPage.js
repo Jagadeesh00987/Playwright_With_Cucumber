@@ -13,7 +13,7 @@ When('Check the avaialbe quantity of the product', async function () {
   await expect(productText.trim()).toEqual("Women Pretty Pink Solid Top");
 
   const productPrice = await this.product.getProductPrice();
-  
+   
 });
 
 When('User add the product to the cart', async function () {
