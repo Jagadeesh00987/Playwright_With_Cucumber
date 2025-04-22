@@ -36,7 +36,7 @@ pipeline {
         stage('Archive Artifacts') {
             steps {
                 echo '📂 Archiving any test results or screenshots...'
-                archiveArtifacts artifacts: 'test-results/**/*.*', allowEmptyArchive: true
+                archiveArtifacts  artifacts: 'test-results/**/*.*', allowEmptyArchive: true
             }
         }
     }
