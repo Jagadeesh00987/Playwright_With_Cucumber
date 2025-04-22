@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<testsuite name="Cucumber" time="67.864" tests="5" skipped="0" failures="2" errors="0" timestamp="2025-04-22T07:13:48.864Z">
+  <testcase classname="User Login" name="Successful login with valid credentials" time="8.619">
+    <system-out><![CDATA[Given User is logged into the application...................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Search Functionality" name="Search the product with the help of Search Box" time="12.41">
+    <system-out><![CDATA[Given User is logged into the application...................................passed
+And User Select certain category to search for the product..................passed
+And User enter a search keyword to find a product...........................passed
+And User clicks the search button...........................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Product page" name="User can able to buy a Product" time="18.284">
+    <failure type="Error" message="function timed out, ensure the promise resolves within 5000 milliseconds"><![CDATA[    at Timeout.<anonymous> (C:\Users\jagadeesh\Desktop\Playwright_With_Cucumber\node_modules\@cucumber\cucumber\lib\time.js:54:20)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)]]></failure>
+    <system-out><![CDATA[Given User is logged into the application...................................passed
+And User clicks the product page and navigate to the product page...........failed
+And Check the avaialbe quantity of the product..............................skipped
+And User add the product to the cart........................................skipped
+And Proceed to the checkout.................................................skipped]]></system-out>
+  </testcase>
+  <testcase classname="User SignUp" name="Unsuccessfull signup with valid credentials" time="6.916">
+    <system-out><![CDATA[Given User SignUp with the Application......................................passed
+When The user click the Account icon........................................passed
+And The user clicks the Create Account Link.................................passed
+And The user enters the username "ABCD" , email "sjagadeesh528@gmail.com", password "Jagadeesh@528",confirmPassword "Jagadeesh@528"..passed
+And The User clicks the Sumbit button.......................................passed]]></system-out>
+  </testcase>
+  <testcase classname="Filter functionaliy" name="User can filter the product through filter functionality" time="20.326">
+    <failure type="Error" message="function timed out, ensure the promise resolves within 5000 milliseconds"><![CDATA[    at Timeout.<anonymous> (C:\Users\jagadeesh\Desktop\Playwright_With_Cucumber\node_modules\@cucumber\cucumber\lib\time.js:54:20)
+    at listOnTimeout (node:internal/timers:569:17)
+    at process.processTimers (node:internal/timers:512:7)]]></failure>
+    <system-out><![CDATA[Given User is logged into the application...................................failed
+And User clicks the product page and navigate to the product page...........skipped
+And User clicks the subcategory in the filter page..........................skipped
+And User drags the prize slider in the filter page..........................skipped
+And Clicks the Advanced Filter..............................................skipped
+And User clicks the Colour Filter...........................................skipped
+And User Clicks the Size in the filter......................................skipped
+And User filter with by boxes by clicking...................................skipped
+And user filter with size by clicking the By Sizes filter...................skipped
+And User clicks the filter button...........................................skipped
+And User will get product based on the filter...............................skipped]]></system-out>
+  </testcase>
+</testsuite>
