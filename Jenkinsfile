@@ -1,10 +1,5 @@
 pipeline {
-agent {
-        docker {
-            image 'mcr.microsoft.com/playwright:focal' // Official Playwright Docker image
-            args '-u root' // Optional, in case you need root permissions
-        }
-    }
+    agent any
 
     environment {
         NODE_ENV = 'test'
@@ -43,9 +38,7 @@ agent {
         }
 
         failure {
-            mail to: 'you@example.com',
-                 subject: "Jenkins Job Failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}",
-                 body: "Check console output at ${env.BUILD_URL}"
+            echo "Build failed. Check logs at ${env.BUILD_URL}"
         }
     }
 }
