@@ -14,26 +14,26 @@ pipeline {
 
         stage('Install dependencies') {
             steps {
-                sh 'npm ci'
+                bat 'npm ci'
             }
         }
 
         stage('Install Playwright Browsers') {
             steps {
-                sh 'npx playwright install --with-deps'
+                bat 'npx playwright install --with-deps'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'npx cucumber-js --publish-quiet'
+                bat 'npx cucumber-js --publish-quiet'
             }
         }
     }
 
     post {
         always {
-            archiveArtifacts artifacts: 'reports/**/*.json', allowEmptyArchive: true
+            archiveArtifacts artifacts: 'Playwright_With_Cucumber/test-results/**/*.json', allowEmptyArchive: true
             junit 'reports/**/*.xml'
         }
 
