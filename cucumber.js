@@ -9,22 +9,22 @@ module.exports = {
       'progress-bar',
       'html:test-results/cucumber-report.html',
       'json:test-results/cucumber-report.json',
-      'rerun:@rerun.txt',
+      'rerun:@rerun.txt'
     ],
     tags: 'not @ignore',
     worldParameters: {},
     parallel: 2,
-    retry: 1,
-    import: [],
+    retry: 0,
     timeout: 60000
   },
+
   smoke: {
+    // Inherits everything from default, but overrides the tags
     tags: '@smoke',
   },
+
   regression: {
     tags: '@regression',
-   
-  },
-   "report": "node scripts/generate-report.js"
-}
+  }
+};
 
