@@ -8,7 +8,7 @@ test.beforeAll('test', async ({ browser }) => {
   const page = await context.newPage();
   await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login' );
   await page.getByRole('textbox', { name: 'Username' }).click();
-  await page.getByRole('textbox', { name: 'Username' }).fill('Admin');
+  await page.getByRole('textbox', { name: 'Username' }).fill('Admin')
   await page.getByRole('textbox', { name: 'Password' }).click();
   await page.getByRole('textbox', { name: 'Password' }).fill('admin123');
   await page.getByRole('button', { name: 'Login' }).click();
@@ -42,5 +42,13 @@ await page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/pim/vie
 await page.tohaveURL('https://opensource-demo.orangehrmlive.com/web/index.php/pim/viewEmployeeList');
 //await page.tohaveURL('openSou')
 await page.locator("button[type='submit']").click();
+
+})
+
+
+test('test4',async()=>{
+
+await page.route('https://rahulshettyacademy.com/client/#/dashboard/myorders',route=>{
+})
 
 })
