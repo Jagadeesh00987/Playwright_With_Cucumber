@@ -13,15 +13,12 @@ class LoginPage {
     await this.page.goto(process.env.BASE_URL);
   }
 
-  async loginform(email) {
-    await this.page.fill(this.emailInput, email);
-   
+  async loginform() {
+    await this.page.fill(this.emailInput, process.env.LOGIN_USER);
    
   }
-  async pwd(password) {
-    
-    await this.page.fill(this.passwordInput, password);
-   
+  async pwd() {
+    await this.page.fill(this.passwordInput, process.env.LOGIN_PASS);
   }
   async rememberme(){
     await this.page.click(this.checkbox);
